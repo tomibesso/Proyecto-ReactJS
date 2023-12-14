@@ -1,18 +1,18 @@
-// import { useEffect, useState } from "react";
-// import { getProducts } from "../services";
+import { useEffect, useState } from "react";
+import { getProducts } from "../services";
 
-// export const useGetProducts => () = {
-//     const [productsData, setProductsData] = useState([]);
+export const useGetProducts = (limit) => {
+    const [productsData, setProductsData] = useState([]);
 
-//     useEffect(() => {
-//       getProducts()
-//       .then((response) => {
-//         setProductsData(response.data.products);
-//       })
-//       .catch((error) => {
-//         console.log(error);
-//       })
-//     }, []);
+    useEffect(() => {
+      getProducts(limit)
+      .then((response) => {
+        setProductsData(response.data.products);
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+    }, []);
 
-//     return {productsData};
-// }
+    return {productsData};
+}

@@ -10,19 +10,11 @@ import './App.css';
 
 // Estilos Bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useGetProducts } from "./hooks/useProducts";
 
 const App = () => {
-    const [productsData, setProductsData] = useState([]);
 
-    useEffect(() => {
-      getProducts()
-      .then((response) => {
-        setProductsData(response.data.products);
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-    }, []);
+    const {productsData} = useGetProducts(15);
 
   return (
     <div style = {{width:'100vw', height:'100vh'}}>
