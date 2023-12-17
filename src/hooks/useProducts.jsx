@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getProducts } from "../services";
+import { getProductById, getProducts } from "../services";
 
 export const useGetProducts = (limit) => {
     const [productsData, setProductsData] = useState([]);
@@ -15,4 +15,20 @@ export const useGetProducts = (limit) => {
     }, []);
 
     return {productsData};
+}
+
+export const useGetProductById = (productId) => {
+  const [productData, setProductData] = useState({});
+
+  useEffect(() => {
+    getProductById(productId)
+    .then((response) => {
+      setProductData(response.data);
+    })
+    .catch((error) => {
+      console.log(error);
+    })
+  }, {});
+
+  return {productData};
 }
