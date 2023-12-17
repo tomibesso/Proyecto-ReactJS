@@ -39,8 +39,33 @@
   color: #888;
 }
 
-svg {
+.bi-cart {
   margin-right: 5px;
   position: relative;
-  bottom: 2.5px
+  bottom: 2.5px;
 }
+
+.bi-shop {
+  position: relative;
+  right: 50px;
+  bottom: 3px;
+}
+
+.navbar {
+  background-color: rgba(14, 111, 51, 0.726);
+}
+
+.itemListContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(4, 98, 38, 0.492);
+}
+
+#basic-nav-dropdown{
+  color: rgb(0, 0, 0);
+}
+
+
+

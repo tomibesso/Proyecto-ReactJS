@@ -1,5 +1,4 @@
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 import { useGetProductById } from '../hooks/useProducts';
 import { useParams } from 'react-router-dom';
 

@@ -8,7 +8,7 @@ export const Home = () => {
         document.title = "Mi Tienda - Home";
     })
 
-    const {productsData} = useGetProducts(15);
+    const {productsData} = useGetProducts(100);
 
   return (
     <ItemListContainer productsData = {productsData} />
