@@ -17,7 +17,6 @@ export const ItemDetailContainer = () => {
       <Card.Text>
         {productData.description}
       </Card.Text>
-      <Button variant="primary">Go somewhere</Button>
     </Card.Body>
   </Card> 
   )
